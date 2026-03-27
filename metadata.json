@@ -1,0 +1,7 @@
+{
+  "name": "Sumedha Chits - Secure Digital Investing",
+  "description": "Official website for Sumedha Chits Pvt Ltd, offering secure growth for digital investing through popular chit schemes.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
