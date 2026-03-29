@@ -293,7 +293,7 @@ export default function App() {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <motion.h2 
-                className="text-[14px] md:text-[18px] font-black uppercase tracking-[0.4em] text-[#0A192F] mb-6 block"
+                className="text-[16px] md:text-[20px] font-extrabold uppercase tracking-widest text-[#4169E1] mb-4 drop-shadow-sm"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
