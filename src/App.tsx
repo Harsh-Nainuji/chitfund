@@ -400,7 +400,7 @@ export default function App() {
         </section>
 
         {/* Schemes Section */}
-        <section className="py-24 bg-[#0A192F] border-t border-gray-800" id="schemes">
+        <section className="py-24 bg-white border-t border-gray-100" id="schemes">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -410,7 +410,7 @@ export default function App() {
           >
             <div className="text-center mb-16">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Investment Plans</p>
-              <h2 className="text-3xl font-bold text-white">Our Popular Schemes</h2>
+              <h2 className="text-3xl font-bold text-[#0A192F]">Our Popular Schemes</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 px-4">
@@ -431,7 +431,7 @@ export default function App() {
               {!showAllSchemes && SCHEMES.length > 9 && (
                 <button 
                   onClick={() => setShowAllSchemes(true)}
-                  className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[#C5A059] hover:gap-4 transition-all"
+                  className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[#C5A059] hover:text-[#0A192F] transition-all"
                 >
                   View All Schemes <ArrowRight size={14} />
                 </button>
