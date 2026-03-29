@@ -36,7 +36,7 @@ const Logo = ({ className, light = false }: { className?: string; light?: boolea
     <img src="/new logo.png" alt="Sumedha Chits Logo" className="h-28 w-auto object-contain drop-shadow-sm shrink-0" />
     <div className="flex flex-col leading-none">
       <span className={cn("font-bold tracking-tight flex items-baseline", light ? "text-white" : "text-[#0A192F]")}>
-        <span className={cn(light ? "text-white" : "text-[#0A192F]", "text-[2.5rem] leading-none")}>U</span>
+        <span className={cn(light ? "text-white" : "text-[#0A192F]", "text-[2.5rem] leading-none")}>SU</span>
         <span className="text-2xl">MEDHA</span>
       </span>
       <span className={cn("text-xs font-bold tracking-[0.2em] mt-1", light ? "text-gray-300" : "text-[#0A192F]")}>CHITS PVT LTD</span>
@@ -95,23 +95,23 @@ const SchemeCard = ({
   subscription: string;
   isPopular?: boolean 
 }) => (
-  <div className={`relative p-8 rounded-sm text-white flex flex-col items-center text-center group transition-all duration-500 hover:z-20 ${isPopular ? 'bg-[#0A192F] border-2 border-[#C5A059] md:scale-110 z-10 shadow-[0_0_40px_rgba(197,160,89,0.3)] ring-2 ring-[#C5A059]/20' : 'bg-[#0A192F] border-2 border-gray-700'}`}>
+  <div className={`relative p-8 rounded-sm flex flex-col items-center text-center group transition-all duration-500 hover:z-20 ${isPopular ? 'bg-white border-4 border-[#C5A059] md:scale-110 z-10 shadow-[0_20px_60px_rgba(197,160,89,0.3)] ring-4 ring-[#C5A059]/10' : 'bg-white border-2 border-gray-100'}`}>
     {isPopular && (
-      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#C5A059] via-[#E5BF77] to-[#C5A059] text-[#0A192F] text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg whitespace-nowrap border border-[#C5A059]">
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#C5A059] via-[#E5BF77] to-[#C5A059] text-[#0A192F] text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-[0.2em] shadow-lg whitespace-nowrap border border-[#C5A059] z-20">
         Most Popular
       </div>
     )}
-    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">{title}</h3>
-    <div className={`text-2xl font-bold mb-3 ${isPopular ? 'text-[#C5A059]' : 'text-white'}`}>₹ {amount}</div>
-    <div className="text-[11px] text-gray-400 mb-6 flex justify-center gap-3">
+    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C5A059] mb-4">{title}</h3>
+    <div className={`text-2xl font-black mb-3 text-[#0A192F]`}>₹ {amount}</div>
+    <div className="text-[11px] text-[#0A192F]/60 mb-6 flex justify-center gap-3">
       <span>Duration: {duration} M</span>
-      <span className="text-gray-600">|</span>
+      <span className="text-gray-300">|</span>
       <span>Sub: ₹ {subscription}</span>
     </div>
-    <div className={`${isPopular ? 'bg-[#C5A059]/10 text-[#C5A059]' : 'bg-[#152a4a] text-green-400'} w-full py-2 px-4 rounded-sm text-[10px] font-medium mb-8`}>
+    <div className="bg-[#152a4a] text-white w-full py-2 px-4 rounded-sm text-[10px] font-medium mb-8">
       Earn up to ₹ {dividend} Dividend
     </div>
-    <button className={`w-full py-3 text-[10px] font-bold uppercase tracking-widest transition-colors ${isPopular ? 'bg-[#C5A059] text-[#0A192F] hover:bg-white' : 'border border-gray-600 hover:bg-white hover:text-[#0A192F]'}`}>
+    <button className={`w-full py-3 text-[10px] font-bold uppercase tracking-widest transition-colors ${isPopular ? 'bg-[#C5A059] text-[#0A192F] hover:bg-[#0A192F] hover:text-white' : 'border border-[#0A192F] text-[#0A192F] hover:bg-[#0A192F] hover:text-white'}`}>
       View Details
     </button>
   </div>
@@ -190,15 +190,15 @@ export default function App() {
   }, []);
 
   const SCHEMES = [
-    { amount: "2,00,000", duration: "20", dividend: "2,500", subscription: "10,000" },
-    { amount: "3,00,000", duration: "25", dividend: "3,000", subscription: "12,000" },
-    { amount: "5,00,000", duration: "20", dividend: "5,000", subscription: "25,000" },
-    { amount: "5,00,000", duration: "25", dividend: "5,000", subscription: "20,000" },
-    { amount: "25,00,000", duration: "40", dividend: "21,875", subscription: "62,500", isPopular: true },
-    { amount: "5,00,000", duration: "40", dividend: "4,375", subscription: "12,500" },
-    { amount: "10,00,000", duration: "30", dividend: "8,333", subscription: "33,333" },
-    { amount: "10,00,000", duration: "40", dividend: "8,750", subscription: "25,000" },
-    { amount: "1,50,000", duration: "50", dividend: "2,000", subscription: "3,000" }
+    { title: "Starter Plan", amount: "2,00,000", duration: "20", dividend: "2,500", subscription: "10,000" },
+    { title: "Standard Plan", amount: "3,00,000", duration: "25", dividend: "3,000", subscription: "12,000" },
+    { title: "Pro Plan", amount: "5,00,000", duration: "20", dividend: "5,000", subscription: "25,000" },
+    { title: "Growth Plan", amount: "5,00,000", duration: "25", dividend: "5,000", subscription: "20,000" },
+    { title: "Popular Selection", amount: "1,05,000", duration: "40", dividend: "1,312", subscription: "2,625", isPopular: true },
+    { title: "Saver Plan", amount: "5,00,000", duration: "40", dividend: "4,375", subscription: "12,500" },
+    { title: "Investor Plan", amount: "10,00,000", duration: "30", dividend: "8,333", subscription: "33,333" },
+    { title: "Fortune Plan", amount: "10,00,000", duration: "40", dividend: "8,750", subscription: "25,000" },
+    { title: "Micro Saver", amount: "1,50,000", duration: "50", dividend: "2,000", subscription: "3,000" }
   ];
 
   const displayedSchemes = showAllSchemes ? SCHEMES : SCHEMES.slice(0, 9);
@@ -207,13 +207,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white font-sans text-[#0A192F] selection:bg-[#C5A059] selection:text-white">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 h-32 flex items-center justify-between">
           <Logo />
           
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             <NavLink href={homeUrl}>Home</NavLink>
+            <NavLink href="#about">About</NavLink>
             <NavLink href="#schemes">Schemes</NavLink>
             <NavLink href="#compliance">Compliance</NavLink>
             <NavLink href="#faq">FAQ</NavLink>
@@ -236,6 +237,7 @@ export default function App() {
               className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 p-6 flex flex-col gap-4"
             >
               <NavLink href={homeUrl}>Home</NavLink>
+              <NavLink href="#about">About</NavLink>
               <NavLink href="#schemes">Schemes</NavLink>
               <NavLink href="#compliance">Compliance</NavLink>
               <NavLink href="#faq">FAQ</NavLink>
@@ -311,29 +313,30 @@ export default function App() {
               </motion.p>
               
               <motion.h1 
-                className="text-5xl md:text-6xl font-bold text-[#0A192F] mb-6 leading-tight"
+                className="text-5xl md:text-6xl font-bold text-[#0A192F] mb-6 leading-tight uppercase tracking-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
-                Secure Growth for <br />
+                SUMEDHA CHITS PVT LIMITED <br />
                 <motion.span 
-                  className="text-[#C5A059] inline-block"
+                  className="text-[#C5A059] inline-block text-3xl md:text-4xl"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  Secure Digital Investing
+                  SMALL SAVINGS, BIG DREAMS
                 </motion.span>
               </motion.h1>
               
               <motion.p 
-                className="max-w-2xl mx-auto text-[#0A192F] text-sm leading-relaxed mb-12"
+                className="max-w-3xl mx-auto text-[#0A192F] text-sm leading-relaxed mb-12"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                At Sumedha Chits Private Ltd, we are committed to providing reliable, transparent, <br className="hidden md:block" />
-                and customer-friendly chit fund services.
+                <span className="block font-bold mb-4 text-base">Welcome to Sumedha Chits Private Limited!!</span>
+                At Sumedha Chits Private Limited, we are committed to providing reliable, transparent, and customer-friendly chit fund services. Our goal is to help individuals and families achieve their financial needs through systematic savings and easy access to funds. <br className="hidden md:block" />
+                With a strong focus on trust, integrity, and customer satisfaction, we strive to build long-term relationships with our subscribers while ensuring safe and efficient financial management.
               </motion.p>
               
               <motion.div 
@@ -509,6 +512,74 @@ export default function App() {
           </motion.div>
         </section>
 
+        {/* About Us & Services Section */}
+        <section className="py-24 bg-white border-t border-gray-100" id="about">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Who We Are</p>
+                <h2 className="text-3xl font-bold text-[#0A192F] mb-8">About Us</h2>
+                <div className="space-y-6 text-[#0A192F]/80 text-sm leading-relaxed text-left">
+                  <p>
+                    Sumedha Chits Private Limited is dedicated to offering safe and reliable chit fund services to help customers save regularly and access funds when required. Our company follows structured financial practices to ensure the smooth operation of chit schemes.
+                  </p>
+                  <p>
+                    We believe that disciplined savings and proper financial planning are essential for achieving personal and business goals. Our experienced team works diligently to provide transparent services and ensure the best experience for all subscribers.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-[#0A192F] p-8 rounded-sm text-white"
+              >
+                <h3 className="text-[#C5A059] font-bold uppercase tracking-widest text-xs mb-8">Our Services</h3>
+                <ul className="space-y-4 text-left">
+                  {[
+                    "Chit fund schemes for individuals and businesses",
+                    "Systematic savings plans",
+                    "Transparent auction process",
+                    "Easy payment and collection system",
+                    "Customer support and guidance"
+                  ].map((service, i) => (
+                    <li key={i} className="flex items-center gap-3 text-xs text-gray-300">
+                      <CheckCircle2 size={16} className="text-[#C5A059]" /> {service}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+
+            <div className="mt-24 pt-24 border-t border-gray-100">
+              <div className="text-center mb-16">
+                <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Core Principles</p>
+                <h2 className="text-3xl font-bold text-[#0A192F]">Our Values</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  { title: "Trust", desc: "Building long-term relationships with customers" },
+                  { title: "Transparency", desc: "Clear and honest business practices" },
+                  { title: "Integrity", desc: "Ethical and responsible operations" },
+                  { title: "Customer Commitment", desc: "Prioritizing customer satisfaction" }
+                ].map((val, i) => (
+                  <div key={i} className="text-center p-6 bg-gray-50 rounded-sm border border-transparent hover:border-[#C5A059]/30 transition-all">
+                    <h4 className="text-[#0A192F] font-bold mb-2">{val.title}</h4>
+                    <p className="text-gray-500 text-[10px] uppercase tracking-widest">{val.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4">
@@ -520,19 +591,29 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
                 {
-                  icon: TrendingUp,
-                  title: "Higher Yields",
-                  description: "Competitive returns compared to traditional banking instruments."
+                  icon: ShieldCheck,
+                  title: "Trusted Service",
+                  description: "Trusted and reliable financial services for individuals and businesses."
                 },
                 {
-                  icon: ShieldCheck,
-                  title: "Instant Liquidity",
-                  description: "Access your funds quickly during emergency needs via auctions."
+                  icon: Eye,
+                  title: "Transparent Policies",
+                  description: "Transparent operations and clear, honest business policies."
+                },
+                {
+                  icon: Users,
+                  title: "Expert Management",
+                  description: "Professional and experienced management team at your service."
+                },
+                {
+                  icon: User,
+                  title: "Customer-Centric",
+                  description: "A customer-centric approach focusing on prioritized satisfaction."
                 },
                 {
                   icon: Smartphone,
-                  title: "Paperless UX",
-                  description: "Manage your installments and dividends entirely through our app."
+                  title: "Secure Schemes",
+                  description: "Secure and well-managed chit schemes for your peace of mind."
                 }
               ].map((feature, idx) => (
                 <motion.div
@@ -738,20 +819,44 @@ export default function App() {
 
             <div className="max-w-3xl mx-auto">
               <FAQItem 
-                question="What is a chit fund?" 
-                answer="A chit fund is a unique financial instrument that combines savings and borrowing. It's a rotating savings and credit association where members contribute a fixed amount monthly, and one member receives the total pool through an auction process." 
+                question="1. What is a chit fund?" 
+                answer="A chit fund is a financial arrangement where a group of members contribute a fixed amount every month, and one member receives the collected amount through an auction or draw." 
               />
               <FAQItem 
-                question="How does a chit scheme work?" 
-                answer="Members contribute monthly. Every month, an auction is held. The member who offers the highest discount (within legal limits) receives the prize money. The discount is then distributed among all members as a dividend." 
+                question="2. How does a chit scheme work?" 
+                answer="In a chit scheme, all members pay a fixed monthly installment. Every month, one member receives the chit amount through an auction process or predetermined method." 
               />
               <FAQItem 
-                question="Who can join a chit scheme?" 
-                answer="Any Indian citizen with a valid source of income and necessary KYC documents (Aadhar, PAN, etc.) can join our schemes after verification." 
+                question="3. Who can join a chit scheme?" 
+                answer="Any individual who meets the eligibility criteria and agrees to the terms and conditions can join a chit scheme." 
               />
               <FAQItem 
-                question="Is my money safe in a chit fund?" 
-                answer="Yes, when you invest with a regulated company like Sumedha Chits. We are registered under the Chit Funds Act, 1982, and regulated by the Government of Karnataka, ensuring 100% legal compliance and security." 
+                question="4. Is my money safe in a chit fund?" 
+                answer="Yes, when managed by a reliable company like Sumedha Chits Private Limited, chit funds are conducted in a structured and transparent manner according to company policies." 
+              />
+              <FAQItem 
+                question="5. What are the benefits of joining a chit fund?" 
+                answer="Regular savings habit, access to funds when needed, flexible financial support, and a community-based financial system." 
+              />
+              <FAQItem 
+                question="6. How are chit auctions conducted?" 
+                answer="Chit auctions are conducted periodically where members bid for the chit amount. The member offering the highest discount receives the amount." 
+              />
+              <FAQItem 
+                question="7. What documents are required to join?" 
+                answer="Generally required documents include: Identity proof, Address proof, Passport size photographs, and Bank details." 
+              />
+              <FAQItem 
+                question="8. Can I join more than one chit scheme?" 
+                answer="Yes, a customer can join multiple chit schemes depending on eligibility and company policies." 
+              />
+              <FAQItem 
+                question="9. How can I make payments?" 
+                answer="Payments can be made through authorized company representatives, bank transfer, or other payment methods provided by the company." 
+              />
+              <FAQItem 
+                question="10. How can I contact customer support?" 
+                answer="You can contact Sumedha Chits Private Limited through our branch offices, phone numbers, or the contact form available on our website." 
               />
               
               <div className="mt-12 flex justify-center">
@@ -780,20 +885,19 @@ export default function App() {
                     <p className="text-gray-400 text-xs leading-relaxed">
                       Sumedha Chits Private Limited <br />
                       No.3FC-401, Raghav's Complex, 4th Cross, East of New BDA Layout Ramamurthynagar, Bengaluru - 560016
-                      <br/>
-                      <a href="https://maps.app.goo.gl/Zi9wtgeNjjJPasFm9" target="_blank" rel="noopener noreferrer" className="text-[#C5A059] hover:text-white transition-colors mt-2 inline-block font-bold tracking-widest uppercase text-[10px]">Get Directions</a>
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <Phone className="text-[#C5A059] shrink-0" size={20} />
                     <p className="text-gray-400 text-xs">
-                      <a href="tel:+919964556559" className="hover:text-white transition-colors">+91 9964556559</a>
+                      <a href="tel:+919964556559" className="hover:text-white transition-colors">+91 9964556559</a> / <a href="tel:+919916389186" className="hover:text-white transition-colors">9916389186</a>
                     </p>
                   </div>
                   <div className="flex gap-4">
                     <Mail className="text-[#C5A059] shrink-0" size={20} />
-                    <p className="text-gray-400 text-xs">
-                      <a href="mailto:sumedhachits@gmail.com" className="hover:text-white transition-colors">sumedhachits@gmail.com</a>
+                    <p className="text-gray-400 text-xs text-left">
+                      sumedhachits@gmail.com <br/>
+                      <span className="text-[9px] uppercase tracking-widest text-[#C5A059]/60">Customer support team is always ready to assist you.</span>
                     </p>
                   </div>
                 </div>
@@ -827,6 +931,7 @@ export default function App() {
             <Logo light={true} className="mb-12" />
             <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
               <NavLink href={homeUrl}>Home</NavLink>
+              <NavLink href="#about">About</NavLink>
               <NavLink href="#schemes">Schemes</NavLink>
               <NavLink href="#compliance">Compliance</NavLink>
               <NavLink href="#faq">FAQ</NavLink>
