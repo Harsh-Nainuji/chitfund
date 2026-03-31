@@ -293,13 +293,6 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <motion.h2 
-                className="text-[16px] md:text-[20px] font-extrabold uppercase tracking-widest text-[#0A192F] mb-4 drop-shadow-sm"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                SUMEDHA CHITS PVT LIMITED
-              </motion.h2>
               <motion.p 
                 className="text-[10px] text-black font-bold tracking-widest mb-8"
                 initial={{ opacity: 0 }}
@@ -319,12 +312,14 @@ export default function App() {
               </motion.p>
               
               <motion.h1 
-                className="text-5xl md:text-6xl font-bold text-[#0A192F] mb-6 leading-tight uppercase tracking-tight"
+                className="text-5xl md:text-6xl font-bold text-[#002366] mb-6 leading-tight uppercase tracking-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
-                SUMEDHA CHITS PVT LIMITED <br />
+                <span className="text-5xl md:text-6xl">S</span>
+                <span className="text-7xl md:text-8xl leading-none -mb-2">U</span>
+                <span className="text-5xl md:text-6xl">MEDHA CHITS PVT LIMITED</span> <br />
                 <motion.span 
                   className="text-[#C5A059] inline-block text-3xl md:text-4xl"
                   whileHover={{ scale: 1.05 }}
@@ -335,13 +330,13 @@ export default function App() {
               </motion.h1>
               
               <motion.p 
-                className="max-w-3xl mx-auto text-[#0A192F] text-sm leading-relaxed mb-12"
+                className="max-w-3xl mx-auto text-[#002366] text-sm leading-relaxed mb-12"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
               >
-                <span className="block font-bold mb-4 text-base">Welcome to Sumedha Chits Private Limited!!</span>
-                At Sumedha Chits Private Limited, we are committed to providing reliable, transparent, and customer-friendly chit fund services. Our goal is to help individuals and families achieve their financial needs through systematic savings and easy access to funds. <br className="hidden md:block" />
+                <span className="block font-bold mb-4 text-base">Welcome to SUMEDHA Chits Private Limited!!</span>
+                At SUMEDHA Chits Private Limited, we are committed to providing reliable, transparent, and customer-friendly chit fund services. Our goal is to help individuals and families achieve their financial needs through systematic savings and easy access to funds. <br className="hidden md:block" />
                 With a strong focus on trust, integrity, and customer satisfaction, we strive to build long-term relationships with our subscribers while ensuring safe and efficient financial management.
               </motion.p>
               
@@ -419,7 +414,7 @@ export default function App() {
           >
             <div className="text-center mb-16">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Investment Plans</p>
-              <h2 className="text-3xl font-bold text-[#0A192F]">Our Popular Schemes</h2>
+              <h2 className="text-3xl font-bold text-[#002366]">Our Popular Schemes</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 px-4">
@@ -526,7 +521,7 @@ export default function App() {
                 transition={{ duration: 0.8 }}
               >
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Who We Are</p>
-                <h2 className="text-3xl font-bold text-[#0A192F] mb-8">About Us</h2>
+                <h2 className="text-3xl font-bold text-[#002366]">About Us</h2>
                 <div className="space-y-6 text-[#0A192F]/80 text-sm leading-relaxed text-left">
                   <p>
                     Sumedha Chits Private Limited is dedicated to offering safe and reliable chit fund services to help customers save regularly and access funds when required. Our company follows structured financial practices to ensure the smooth operation of chit schemes.
@@ -564,7 +559,7 @@ export default function App() {
             <div className="mt-24 pt-24 border-t border-gray-100">
               <div className="text-center mb-16">
                 <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Core Principles</p>
-                <h2 className="text-3xl font-bold text-[#0A192F]">Our Values</h2>
+                <h2 className="text-3xl font-bold text-[#002366]">Our Values</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
@@ -648,26 +643,26 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Our Leaders</p>
-              <h2 className="text-3xl font-bold text-[#0A192F]">Messages from the Board</h2>
+              <h2 className="text-3xl font-bold text-[#002366]">Messages from the Board</h2>
             </div>
 
               {/* Board Messages Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { name: "Lavanya Madam", role: "Director", msg: "At Sumedha Chits Pvt. Ltd., we are committed to providing secure, transparent, and reliable chit solutions. Our focus is on building trust and helping customers achieve their financial goals with confidence." },
-                { name: "Mahesh Sir", role: "Director", msg: "We believe in simple, disciplined, and dependable financial growth. At Sumedha Chits Pvt. Ltd., we strive to deliver value-driven schemes with integrity and customer-first service." }
+                { name: "Lavanya Madam", role: "Director", msg: "At SUMEDHA Chits Pvt. Ltd., we are committed to providing secure, transparent, and reliable chit solutions. Our focus is on building trust and helping customers achieve their financial goals with confidence." },
+                { name: "Mahesh Sir", role: "Director", msg: "We believe in simple, disciplined, and dependable financial growth. At SUMEDHA Chits Pvt. Ltd., we strive to deliver value-driven schemes with integrity and customer-first service." }
               ].map((leader, i) => (
                 <div key={i} className="bg-gray-50 p-8 rounded-sm text-[#0A192F] border border-gray-100">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center overflow-hidden">
-                      <Users className="text-[#C5A059]" size={24} />
+                    <div className="w-12 h-12 rounded-full bg-[#002366] flex items-center justify-center overflow-hidden">
+                      <span className="text-white font-bold text-lg">{leader.name.charAt(0)}</span>
                     </div>
                     <div>
                       <h4 className="font-bold text-sm">{leader.name}</h4>
                       <p className="text-[#C5A059] text-[10px] font-bold uppercase tracking-widest">{leader.role}</p>
                     </div>
                   </div>
-                  <p className="text-[#0A192F]/60 text-xs italic leading-relaxed">"{leader.msg}"</p>
+                  <p className="text-[#0A192F]/60 text-xs italic leading-relaxed" dangerouslySetInnerHTML={{ __html: `&quot;${leader.msg}&quot;` }}></p>
                 </div>
               ))}
             </div>
@@ -685,7 +680,7 @@ export default function App() {
           >
             <div className="text-center mb-20">
               <p className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C5A059] mb-4">Our Commitment</p>
-              <h2 className="text-4xl md:text-5xl font-black text-[#0A192F]">Built on Transparency & Law</h2>
+              <h2 className="text-4xl md:text-5xl font-black text-[#002366]">Built on Transparency & Law</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
@@ -732,7 +727,7 @@ export default function App() {
                 <a href="/SUMEDHA CHITS PRIVATE LIMITED-GST  Certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white text-[#0A192F] px-8 py-5 rounded-sm text-xs font-bold uppercase tracking-widest border border-gray-200 hover:border-[#C5A059] hover:shadow-2xl hover:-translate-y-1 transition-all">
                   <ShieldCheck size={20} className="text-[#C5A059]" /> GST Certificate
                 </a>
-                <a href="/TAN_88305929732731_signed_SUMEDHA.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white text-[#0A192F] px-8 py-5 rounded-sm text-xs font-bold uppercase tracking-widest border border-gray-200 hover:border-[#C5A059] hover:shadow-2xl hover:-translate-y-1 transition-all">
+                <a href="/TAN_88305929732731_signed_SUMEDHA (1).pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-white text-[#002366] px-8 py-5 rounded-sm text-xs font-bold uppercase tracking-widest border border-gray-200 hover:border-[#C5A059] hover:shadow-2xl hover:-translate-y-1 transition-all">
                   <ShieldCheck size={20} className="text-[#C5A059]" /> TAN Document
                 </a>
               </div>
@@ -818,7 +813,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Help Center</p>
-              <h2 className="text-3xl font-bold text-[#0A192F]">Frequently Asked <span className="text-[#C5A059]">Questions</span></h2>
+              <h2 className="text-3xl font-bold text-[#002366]">Frequently Asked <span className="text-[#C5A059]">Questions</span></h2>
             </div>
 
             <div className="max-w-3xl mx-auto">
@@ -855,6 +850,7 @@ export default function App() {
             <div className="text-center mb-16">
               <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#C5A059] mb-4">Contact</p>
               <h2 className="text-3xl font-bold text-white">Support & Location</h2>
+              <p className="text-[#002366] text-sm mt-4 font-medium">Contact SUMEDHA Chits Private Limited</p>
             </div>
 
             <div className="bg-[#0A192F] rounded-sm overflow-hidden grid grid-cols-1 lg:grid-cols-2">
@@ -864,7 +860,7 @@ export default function App() {
                   <div className="flex gap-4">
                     <MapPin className="text-[#C5A059] shrink-0" size={20} />
                     <div className="text-gray-400 text-xs leading-relaxed">
-                      <div className="bg-white px-2 py-0.5 inline-block text-[#0A192F] font-bold rounded-sm mb-1 uppercase tracking-tight">Sumedha Chits Private Limited</div> <br />
+                      <div className="bg-white px-2 py-0.5 inline-block text-[#002366] font-bold rounded-sm mb-1 uppercase tracking-tight">SUMEDHA Chits Private Limited</div> <br />
                       No.3FC-401, Raghav's Complex, 4th Cross, East of New BDA Layout Ramamurthynagar, Bengaluru - 560016
                     </div>
                   </div>
@@ -931,10 +927,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <p className="text-[9px] text-gray-400 uppercase tracking-widest mb-2 flex items-center justify-center gap-1">
-              © 2026 <span className="text-white font-bold flex items-baseline gap-0.5">
+              &copy; 2026 <span className="text-white font-bold flex items-baseline gap-0.5">
                 <span>S</span>
-                <span className="text-[27px] leading-none -mb-1">U</span>
-                <span>MEDHA CHITS PRIVATE LIMITED</span>
+                <span className="text-[#002366]">U</span>
+                <span className="text-[#002366]">MEDHA CHITS PRIVATE LIMITED</span>
               </span>. ALL RIGHTS RESERVED.
             </p>
             <p className="text-[9px] text-gray-400 uppercase tracking-widest">
