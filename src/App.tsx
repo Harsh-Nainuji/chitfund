@@ -219,12 +219,12 @@ export default function App() {
           
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
-            <NavLink href={homeUrl}>Home</NavLink>
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#schemes">Schemes</NavLink>
-            <NavLink href="#compliance">Compliance</NavLink>
-            <NavLink href="#faq">FAQ</NavLink>
-            <NavLink href="#support">Support</NavLink>
+            <NavLink href={homeUrl} className="text-[#002366]">Home</NavLink>
+            <NavLink href="#about" className="text-[#002366]">About</NavLink>
+            <NavLink href="#schemes" className="text-[#002366]">Schemes</NavLink>
+            <NavLink href="#compliance" className="text-[#002366]">Compliance</NavLink>
+            <NavLink href="#faq" className="text-[#002366]">FAQ</NavLink>
+            <NavLink href="#support" className="text-[#002366]">Support</NavLink>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -649,13 +649,13 @@ export default function App() {
               {/* Board Messages Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { name: "Lavanya Madam", role: "Director", msg: "At SUMEDHA Chits Pvt. Ltd., we are committed to providing secure, transparent, and reliable chit solutions. Our focus is on building trust and helping customers achieve their financial goals with confidence." },
-                { name: "Mahesh Sir", role: "Director", msg: "We believe in simple, disciplined, and dependable financial growth. At SUMEDHA Chits Pvt. Ltd., we strive to deliver value-driven schemes with integrity and customer-first service." }
+                { name: "Lavanya KM", role: "Director", msg: "At SUMEDHA Chits Pvt. Ltd., we are committed to providing secure, transparent, and reliable chit solutions. Our focus is on building trust and helping customers achieve their financial goals with confidence." },
+                { name: "Mahesh KM", role: "Director", msg: "We believe in simple, disciplined, and dependable financial growth. At SUMEDHA Chits Pvt. Ltd., we strive to deliver value-driven schemes with integrity and customer-first service." }
               ].map((leader, i) => (
                 <div key={i} className="bg-gray-50 p-8 rounded-sm text-[#0A192F] border border-gray-100">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-full bg-[#002366] flex items-center justify-center overflow-hidden">
-                      <span className="text-white font-bold text-lg">{leader.name.charAt(0)}</span>
+                      <span className="text-white font-bold">{leader.name === 'Lavanya KM' ? 'K' : 'K M'}</span>
                     </div>
                     <div>
                       <h4 className="font-bold text-sm">{leader.name}</h4>
@@ -928,9 +928,8 @@ export default function App() {
           <div className="text-center">
             <p className="text-[9px] text-gray-400 uppercase tracking-widest mb-2 flex items-center justify-center gap-1">
               &copy; 2026 <span className="text-white font-bold flex items-baseline gap-0.5">
-                <span>S</span>
-                <span className="text-[#002366]">U</span>
-                <span className="text-[#002366]">MEDHA CHITS PRIVATE LIMITED</span>
+                <span>K</span>
+                <span className="text-[#002366]">K M</span>
               </span>. ALL RIGHTS RESERVED.
             </p>
             <p className="text-[9px] text-gray-400 uppercase tracking-widest">
